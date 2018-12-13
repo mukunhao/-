@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Flat, Clean, Responsive, admin template built with bootstrap 3">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Cameo | Responsive Admin Dashboard</title>
+
+    <script type="text/javascript">
+    </script>
+    <link rel="stylesheet" href="vendor/offline/theme.css">
+    <link rel="stylesheet" href="vendor/pace/theme.css">
+
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link href="css/bootstrap-table.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/panel.css">
+
+    <link rel="stylesheet" href="css/skins/palette.1.css" id="skin">
+    <link rel="stylesheet" href="css/fonts/style.1.css" id="font">
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <script src="vendor/modernizr.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+
+<div class="app" data-sidebar="locked">
+
+    <header class="header header-fixed navbar box-shadow">
+        <!-- <div class="brand">
+            <a href="javascript:;" class="fa fa-bars off-left visible-xs" data-toggle="off-canvas" data-move="ltr"></a>
+            <a href="javascript:;" class="fa fa-align-right off-right visible-xs" data-toggle="off-canvas" data-move="rtl"></a>
+            <a href="index.html" class="navbar-brand">
+                <i class="fa fa-stop mg-r-sm"></i>
+                <span class="heading-font">
+Cameo<b>ADMIN</b>
+</span>
+            </a>
+        </div> -->
+        <div class="brands">
+            海绵大数据系统
+        </div>
+
+        <ul class="nav navbar-nav navbar-right hidden-xs">
+
+            <!-- 消息 -->
+            <li class="notifications dropdown hidden-xs">
+                <a href="javascript:;" data-toggle="dropdown">
+                    <i class="fa fa-bell"></i>
+                    <div class="badge badge-top bg-danger animated flash" id="newStudent"></div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right animated slideInRight">
+                    <div class="panel bg-white no-border no-margin">
+                        <div class="panel-heading no-radius">
+                            <small>
+                                <b>更新</b>
+                            </small>
+                            <small class="pull-right">
+                                <a href="javascript:;" class="mg-r-xs">标记已读</a>&#8226;
+                                <a href="javascript:;" class="fa fa-cog mg-l-xs"></a>
+                            </small>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="javascript:;">
+                                        <span class="pull-left mg-t-xs mg-r-md">
+                                            <img src="img/face4.jpg" class="avatar avatar-sm img-circle" alt="">
+                                        </span>
+                                    <div class="m-body show pd-t-xs">
+                                        <a href="baoming.html" class="news">
+                                            <span class="newStudentBm"></span>
+                                            <small class="newStudentSmall"></small>
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+
+            <!-- 用户 -->
+            <li class="quickmenu">
+                <a href="javascript:;" data-toggle="dropdown">
+                        <span class="avatar pull-left img-circle" style="display:block;width: 50px;line-height: 30px;
+                        ">管理员</span>
+                    <i class="caret mg-l-xs hidden-xs no-margin"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right mg-r-xs">
+                    <li>
+                        <a href="javascript:;">
+                            <div class="pd-t-sm">
+                                gerald@morris.com
+                                <br>
+                                <small class="text-muted">4.2 MB of 51.25 GB used</small>
+                            </div>
+                            <div class="progress progress-xs no-radius no-margin mg-b-sm">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">设置</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">更新</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">消息通知
+                            <div class="badge bg-danger pull-right">3</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">帮助 ?</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="signin.html">退出登录</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <section class="layout">
+
+        <aside class="sidebar canvas-left" style="background:#000">
+
+            <nav class="main-navigation">
+                <ul>
+                    <li class="">
+                        <a onclick="window.location = './kehu.html'" data-toggle="dropdown">
+                            <!-- <i class="fa fa-coffee"></i> -->
+                            <span>推送数据</span>
+                        </a>
+                    </li>
+                    <li class="dropdown show-on-hover">
+                        <a onclick="window.location = './back-data.html'" href="###" data-toggle="dropdown">
+                            <!-- <i class="fa fa-ellipsis-h"></i> -->
+                            <span>回收数据</span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown show-on-hover">
+                        <a onclick="window.location = './mail.html'" href="###" data-toggle="dropdown">
+                            <!-- <i class="fa fa-tasks"></i> -->
+                            <span>海绵数据</span>
+                        </a>
+
+                    </li>
+                    <li class="active">
+                        <a onclick="window.location = './baoming.html'" href="###" data-toggle="dropdown">
+                            <!-- <div class="badge bg-none pull-right">8</div> -->
+                            <!-- <i class="fa fa-envelope"></i> -->
+                            <span>美术饭报名</span>
+                        </a>
+                    </li>
+                    <li class="dropdown show-on-hover">
+                        <a href="javascript:;" data-toggle="dropdown">
+                            <!-- <i class="fa fa-file"></i> -->
+                            <span>统计报告</span>
+                        </a>
+
+                </ul>
+            </nav>
+
+
+        </aside>
+
+
+        <aside class="sidebar-250 canvas-right bg-white bd-t">
+
+            <div class="content-wrap no-padding">
+                <nav role="navigation">
+                    <div class="no-padding">
+                        <input type="text" placeholder="搜索画室" class="nav_search_huashi">
+                        <li class="fa fa-times-circle "></li>
+                        <!-- <div class="nav_all_data">全部<span class="badge pull-right bg-danger">896</span></div> -->
+                        <ul class="nav nav-pills nav-stacked">
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+        <section class="main-content">
+            <ul class="main-content-top main-content-all">
+                <li class="main-content-active hmbaoming"><a href="javascript:;" id="baoming">报名<span
+                        class="badge pull-right  bg-danger baoming"></span></a></li>
+                <li><a href="javascript:;" id="huishou">回收<span class="badge pull-right bg-danger huishou"></span></a>
+                </li>
+            </ul>
+            <ul class="main-content-all main-content-center">
+                <li><a href="javascript:;" id="sx">刷新</a></li>
+                <li><a href="" id="msfdc">批量导出</a></li>
+                <li><a href="http://www.haimian.com/api/Msfexportdata? schoolid = 0 & status = 0" id="msfalldc">全部导出</a>
+                </li>
+            </ul>
+            <div class="data_table main-content-all">
+                <table id="table"></table>
+            </div>
+
+        </section>
+
+
+    </section>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">详情</h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <!-- <button type="button" class="btn btn-primary">提交更改</button> -->
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<script src="vendor/jquery-1.11.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<script src="vendor/jquery.placeholder.js"></script>
+<script src="vendor/fastclick.js"></script>
+
+
+<script src="vendor/offline/offline.min.js"></script>
+<script src="vendor/pace/pace.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script src="js/bootstrap-table-zh-CN.js"></script>
+<script src="js/bootstrap-paginator.js"></script>
+<script src="js/off-canvas.js"></script>
+<script src="js/main.js"></script>
+
+<script src="js/panel.js"></script>
+<script type="text/javascript">
+    var schoolid = ''
+    var datas = []
+    //刷新页面
+    $("#sx").click(function () {
+        location.reload(true)
+    })
+
+    //弹窗居中
+    $('#myModal').on('show.bs.modal', function (e) {
+        // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+        $(this).css('display', 'block');
+        var modalHeight = $(window).height() / 2 - $('#myModal .modal-dialog').height() / 2;
+        $(this).find('.modal-dialog').css({
+            'margin-top': modalHeight
+        });
+    });
+    let school = '';
+    $(document).ready(function () {
+        aa(school)
+    })
+    var storage = window.localStorage;
+    $(".news").click(function () {
+        storage.time = (new Date()).getTime();
+        console.log(storage["time"])
+        $("#newStudent").html('')
+        $(".news").hide()
+    })
+    $.ajax({
+        url: 'http://www.haimian.com/api/getStudentNo',
+        dataType: 'JSON',
+        type: 'get',
+        success: function (res) {
+            console.log(storage["time"])
+            if (res.data.time > storage["time"]) {
+                if (res.data.count[0].count != 0) {
+                    $(".newStudentBm").html("你有" + res.data.count[0].count + "个新的报名数据")
+                    $(".newStudentSmall").html(res.data.date[0].created_at)
+                    $("#newStudent").html(1)
+                }
+            } else {
+                $(".newStudentBm").html("暂无新报名数据")
+            }
+        }
+    })
+    $(".fa-times-circle").click(function () {
+        $(".nav_search_huashi").val('')
+        $(".fa-times-circle").css("display", "none")
+        circle()
+    })
+
+    function circle() {
+        $.ajax({
+            url: 'http://www.haimian.com/api/getSchool',
+            dataType: 'JSON',
+            type: 'POST',
+            data: {
+                "school": school
+            },
+            success: function (res) {
+                let data = res.data.data;
+                let $html = `<li class="nav-active" data-id=''>
+                                    <a href="javascript:;">全部
+                                                <span class="badge pull-right bg-danger">${res.data.nums}</span>
+                                            </a>
+                                </li>`;
+                $.each(data, function (index, item) {
+                    $html += `<li data-id='${item.id}'>
+                                    <a href="javascript:;">${item.abbreviation}
+                                        <span class="badge pull-right bg-default">${item.count}</span>
+                                    </a>
+                                </li>`
+                    $('.nav-stacked').html($html)
+                })
+            }
+        })
+    }
+
+    $.ajax({
+        url: 'http://www.haimian.com/api/getSchool',
+        dataType: 'JSON',
+        type: 'POST',
+        data: {
+            "school": school
+        },
+        success: function (res) {
+            let data = res.data.data;
+            let $html = `<li class="nav-active" data-id=''>
+                                    <a href="javascript:;">全部
+                                                <span class="badge pull-right bg-danger">${res.data.nums}</span>
+                                            </a>
+                                </li>`;
+            $.each(data, function (index, item) {
+                $html += `<li data-id='${item.id}'>
+                                    <a href="javascript:;">${item.abbreviation}
+                                        <span class="badge pull-right bg-default">${item.count}</span>
+                                    </a>
+                                </li>`
+                $('.nav-stacked').html($html)
+            })
+        }
+    })
+    $("#baoming").click(function () {
+        datas = []
+        let status = 0
+        let url = "http://www.haimian.com/api/Msfexportdata?schoolid = " + schoolid + "&status = " + status
+        $("#msfalldc").attr('href', url)
+        $.ajax({
+            url: 'http://www.haimian.com/api/getIndex',
+            dataType: 'JSON',
+            type: 'POST',
+            data: {
+                "schoolid": schoolid
+            },
+            success: function (res) {
+                let $htmls = ''
+                let data = res.data.data;
+                if (data == '') {
+                    $htmls = `<div style='background:#eee;width:100%;text-align:center;line-height:50px;font-size:16px'>暂无数据</div>`
+                    $('.data_table').html($htmls)
+                } else {
+                    $('.data_table').html('<table id="table"></table>')
+                    $("#table").bootstrapTable({ // 对应table标签的id
+                        // url: "<%=request.getContextPath()%>/api/getDataList.do", // 获取表格数据的url
+                        // cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
+                        // striped: true, //表格显示条纹，默认为false
+                        pagination: true, // 在表格底部显示分页组件，默认false
+                        //search: true,
+                        //detailView: true, //父子表
+                        striped: true,
+                        pageList: [10, 20, 30], // 设置页面可以显示的数据条数
+                        pageSize: 10, // 页面数据条数
+                        //sidePagination: "client", //server
+                        // clickToSelect: true, //是否启用点击选中行
+                        pageNumber: 1, // 首页页码
+                        columns: [{
+                            checkbox: true, // 显示一个勾选框
+                            align: 'center',
+                            valign: 'middle', // 居中显示
+
+                        }, {
+                            field: 'user_number', // 返回json数据中的name
+                            title: '编号', // 表格表头显示文字
+                            align: 'center', // 左右居中
+                            valign: 'middle' // 上下居中
+                        }, {
+                            field: 'name',
+                            title: '省份',
+                            align: 'center',
+                            valign: 'middle'
+                        }, {
+                            field: 'phone',
+                            title: '联系号码',
+                            align: 'center',
+                            valign: 'middle',
+
+                        }, {
+                            field: 'statu',
+                            title: '状态',
+                            align: 'center',
+                            valign: 'middle',
+                        },
+                            {
+                                field: 'push_time',
+                                title: '推送时间',
+                                align: 'center',
+                                valign: 'middle',
+                            }, {
+                                field: 'abbreviation',
+                                title: '报名客户',
+                                align: 'center',
+                                valign: 'middle',
+                            },
+
+                            {
+                                title: "操作",
+                                align: 'center',
+                                valign: 'middle',
+                                width: 160, // 定义列的宽度，单位为像素px
+                                formatter: function (value, row, index) {
+                                    return '<button class="delete  btn" id="delete">删除</button>';
+                                },
+                                events: {
+                                    'click #fenpei': function (e, value, row, index) {
+                                        console.log(index)
+                                        // layer.open({
+                                        //     type: 1,
+                                        //     skin: 'layui-layer-rim', //加上边框
+                                        //     area: ['420px', '240px'], //宽高
+                                        //     content: 'html内容'
+                                        // });
+                                    }
+                                }
+                            }
+                        ],
+                        data: data,
+                        onLoadSuccess: function () { //加载成功时执行
+                            console.info("加载成功");
+                        },
+                        onLoadError: function () { //加载失败时执行
+                            console.info("加载数据失败");
+                        },
+                        onCheck: function (row) {
+                            datas.push(row.id);
+                            let url = "http://www.haimian.com/api/Msfexport?date = " + datas
+                            $("#msfdc").attr("href", url);
+                            console.log(url)
+                        },
+                        onCheckAll: function (row) {
+                            for (var i = 0; i < row.length; i++) {
+                                datas.push(row[i].id)
+                            }
+                            let url = "http://www.haimian.com/api/Msfexport?date = " + datas
+                            $("#msfdc").attr("href", url);
+                        },
+                        onUncheck: function (row) {
+                            datas.splice($.inArray(row.id, datas), 1)
+                            console.log(datas)
+                        },
+                        onUncheckAll: function (row) {
+                            datas = []
+                        }
+                    })
+                    $('.nav-pills li').click(function () {
+                        $(this).addClass('nav-active').siblings('.nav-active').removeClass('nav-active')
+                    })
+                    $('.main-content-top li').click(function () {
+                        $(this).addClass('main-content-active').siblings().removeClass('main-content-active')
+                    })
+                }
+            }
+        })
+    })
+    $("#huishou").click(function () {
+        datas = []
+        let status = 5
+        let url = "http://www.haimian.com/api/Msfexportdata?schoolid = " + schoolid + "&status = " + status
+        $("#msfalldc").attr('href', url)
+        $.ajax({
+            url: 'http://www.haimian.com/api/Msfhuishou',
+            dataType: 'JSON',
+            type: 'POST',
+            data: {
+                "schoolid": schoolid
+            },
+            success: function (res) {
+                let $htmls = ''
+                let data = res.data.data;
+                if (data == '') {
+                    $htmls = `<div style='background:#eee;width:100%;text-align:center;line-height:50px;font-size:16px'>暂无数据</div>`
+                    $('.data_table').html($htmls)
+                } else {
+                    $('.data_table').html('<table id="table"></table>')
+                    $("#table").bootstrapTable({ // 对应table标签的id
+                        // url: "<%=request.getContextPath()%>/api/getDataList.do", // 获取表格数据的url
+                        // cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
+                        // striped: true, //表格显示条纹，默认为false
+                        pagination: true, // 在表格底部显示分页组件，默认false
+                        //search: true,
+                        //detailView: true, //父子表
+                        striped: true,
+                        pageList: [10, 20, 30], // 设置页面可以显示的数据条数
+                        pageSize: 10, // 页面数据条数
+                        //sidePagination: "client", //server
+                        // clickToSelect: true, //是否启用点击选中行
+                        pageNumber: 1, // 首页页码
+                        columns: [{
+                            checkbox: true, // 显示一个勾选框
+                            align: 'center',
+                            valign: 'middle', // 居中显示
+
+                        }, {
+                            field: 'user_number', // 返回json数据中的name
+                            title: '编号', // 表格表头显示文字
+                            align: 'center', // 左右居中
+                            valign: 'middle' // 上下居中
+                        }, {
+                            field: 'name',
+                            title: '省份',
+                            align: 'center',
+                            valign: 'middle'
+                        }, {
+                            field: 'phone',
+                            title: '联系号码',
+                            align: 'center',
+                            valign: 'middle',
+
+                        }, {
+                            field: 'statu',
+                            title: '状态',
+                            align: 'center',
+                            valign: 'middle',
+                        },
+                            {
+                                field: 'push_time',
+                                title: '推送时间',
+                                align: 'center',
+                                valign: 'middle',
+                            }, {
+                                field: 'abbreviation',
+                                title: '报名客户',
+                                align: 'center',
+                                valign: 'middle',
+                            },
+
+                            {
+                                title: "操作",
+                                align: 'center',
+                                valign: 'middle',
+                                width: 160, // 定义列的宽度，单位为像素px
+                                formatter: function (value, row, index) {
+                                    return '<button class="fenpei btn btn-primary" id="fenpei">推送</button>' + '<button class="delete  btn" id="delete">删除</button>';
+                                },
+                                events: {
+                                    'click #fenpei': function (e, value, row, index) {
+                                        console.log(index)
+                                        // layer.open({
+                                        //     type: 1,
+                                        //     skin: 'layui-layer-rim', //加上边框
+                                        //     area: ['420px', '240px'], //宽高
+                                        //     content: 'html内容'
+                                        // });
+                                    }
+                                }
+                            }
+                        ],
+                        data: data,
+                        onLoadSuccess: function () { //加载成功时执行
+                            console.info("加载成功");
+                        },
+                        onLoadError: function () { //加载失败时执行
+                            console.info("加载数据失败");
+                        },
+                        onCheck: function (row) {
+                            datas.push(row.id);
+                            let url = "http://www.haimian.com/api/Msfexport?date = " + datas
+                            $("#msfdc").attr("href", url);
+                            console.log(url)
+                        },
+                        onCheckAll: function (row) {
+                            for (var i = 0; i < row.length; i++) {
+                                datas.push(row[i].id)
+                            }
+                            let url = "http://www.haimian.com/api/Msfexport?date = " + datas
+                            $("#msfdc").attr("href", url);
+                        },
+                        onUncheck: function (row) {
+                            datas.splice($.inArray(row.id, datas), 1)
+                            console.log(datas)
+                        },
+                        onUncheckAll: function (row) {
+                            datas = []
+                        }
+                    })
+                    $('.nav-pills li').click(function () {
+                        $(this).addClass('nav-active').siblings('.nav-active').removeClass('nav-active')
+                    })
+                    $('.main-content-top li').click(function () {
+                        $(this).addClass('main-content-active').siblings().removeClass('main-content-active')
+                    })
+                }
+            }
+        })
+    })
+
+    function aa(school) {
+        $.ajax({
+            url: 'http://www.haimian.com/api/getIndex',
+            dataType: 'JSON',
+            type: 'POST',
+            data: {
+                "schoolid": school
+            },
+            success: function (res) {
+                $(".baoming").html(res.data.count[0].statistics)
+            }
+        })
+        $.ajax({
+            url: 'http://www.haimian.com/api/Msfhuishou',
+            dataType: 'JSON',
+            type: 'POST',
+            data: {
+                "schoolid": school
+            },
+            success: function (res) {
+                $(".huishou").html(res.data.count[0].statistics)
+            }
+        })
+    }
+
+    $.ajax({
+        url: 'http://www.haimian.com/api/getIndex',
+        dataType: 'JSON',
+        type: 'POST',
+        data: {
+            "schoolid": school
+        },
+        success: function (res) {
+            // $(".baoming").html(res.data.count[0].statistics)
+            let data = res.data.data;
+            let $htmls = ''
+            if (data == '') {
+                $htmls = `<div style='background:#eee;width:100%;text-align:center;line-height:50px;font-size:16px'>暂无数据</div>`
+                $('.data_table').html($htmls)
+            } else {
+                $('.data_table').html('<table id="table"></table>')
+                $("#table").bootstrapTable({ // 对应table标签的id
+                    // url: "<%=request.getContextPath()%>/api/getDataList.do", // 获取表格数据的url
+                    // cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
+                    // striped: true, //表格显示条纹，默认为false
+                    pagination: true, // 在表格底部显示分页组件，默认false
+                    //search: true,
+                    //detailView: true, //父子表
+                    striped: true,
+                    pageList: [10, 20, 30], // 设置页面可以显示的数据条数
+                    pageSize: 10, // 页面数据条数
+                    //sidePagination: "client", //server
+                    // clickToSelect: true, //是否启用点击选中行
+                    pageNumber: 1, // 首页页码
+                    // sidePagination: 'server', // 设置为服务器端分页
+                    //     responseHandler: function responseHandler(sourceData) {
+                    //     //这里要做分页，所以对返回的数据进行了处理
+                    //     return {
+                    //         "total": sourceData.total,  // 总条数
+                    //         "rows": sourceData.rows // 返回的数据列表（后台返回一个list集合）
+                    //     };
+                    // },
+
+                    // queryParams: function(params) { // 请求服务器数据时发送的参数，可以在这里添加额外的查询参数，返回false则终止请求
+
+                    //     return {
+                    //         pageSize: params.limit, // 每页要显示的数据条数
+                    //         offset: params.offset, // 每页显示数据的开始行号
+                    //         sort: params.sort, // 要排序的字段
+                    //         sortOrder: params.order, // 排序规则
+                    //         dataId: $("#dataId").val() // 额外添加的参数
+                    //     }
+                    // },
+                    // sortName: 'id', // 要排序的字段
+                    // sortOrder: 'desc', // 排序规则
+                    //注册加载子表的事件。你可以理解为点击父表中+号时触发的事件
+                    // onExpandRow: function(index, row, $detail) {
+                    //     console.log(index);
+                    //     console.log(row);
+                    //     onclick = row.id;
+                    //     var parentId = row.id;
+                    //     var prjLogBookProblemTable = $detail.html('<table></table>').find('table');
+                    //     $(prjLogBookProblemTable).bootstrapTable({
+                    //         columns: [
+                    //             /* {
+                    //                                                 checkbox : true,
+                    //                                             },*/
+                    //             {
+                    //                 field: 'id',
+                    //                 // title: '自增id',
+                    //                 align: 'center',
+                    //                 visible: false, //隐藏列
+                    //             }, {
+                    //                 field: 'previousPeopleName',
+                    //                 // title: '上一节点处理人',
+                    //                 align: 'center',
+                    //             }, {
+                    //                 field: 'operatorName',
+                    //                 // title: '当前处理人',
+                    //                 align: 'center',
+                    //             }, {
+                    //                 field: 'nextPeopleName',
+                    //                 // title: '下一个节点处理人',
+                    //                 align: 'center',
+                    //             }
+
+                    //             , {
+                    //                 field: 'solution',
+                    //                 // title: '解决方案',
+                    //                 align: 'center',
+                    //             }, {
+                    //                 field: 'timeConsuming',
+                    //                 // title: '耗时(小时)',
+                    //                 align: 'center',
+                    //             }
+                    //         ],
+                    //     })
+                    // },
+
+
+                    columns: [{
+                        checkbox: true, // 显示一个勾选框
+                        align: 'center',
+                        valign: 'middle', // 居中显示
+
+                    }, {
+                        field: 'user_number', // 返回json数据中的name
+                        title: '编号', // 表格表头显示文字
+                        align: 'center', // 左右居中
+                        valign: 'middle' // 上下居中
+                    }, {
+                        field: 'name',
+                        title: '省份',
+                        align: 'center',
+                        valign: 'middle'
+                    }, {
+                        field: 'phone',
+                        title: '联系号码',
+                        align: 'center',
+                        valign: 'middle',
+
+                    }, {
+                        field: 'statu',
+                        title: '状态',
+                        align: 'center',
+                        valign: 'middle',
+                    },
+                        {
+                            field: 'push_time',
+                            title: '推送时间',
+                            align: 'center',
+                            valign: 'middle',
+                        }, {
+                            field: 'abbreviation',
+                            title: '报名客户',
+                            align: 'center',
+                            valign: 'middle',
+                        },
+
+                        {
+                            title: "操作",
+                            align: 'center',
+                            valign: 'middle',
+                            width: 160, // 定义列的宽度，单位为像素px
+                            formatter: function (value, row, index) {
+                                return '<button class="delete  btn" id="delete">删除</button>';
+                            },
+                            events: {
+                                'click #fenpei': function (e, value, row, index) {
+                                    console.log(index)
+                                    // layer.open({
+                                    //     type: 1,
+                                    //     skin: 'layui-layer-rim', //加上边框
+                                    //     area: ['420px', '240px'], //宽高
+                                    //     content: 'html内容'
+                                    // });
+                                }
+                            }
+                        }
+                    ],
+                    data: data,
+                    onLoadSuccess: function () { //加载成功时执行
+                        console.info("加载成功");
+                    },
+                    onLoadError: function () { //加载失败时执行
+                        console.info("加载数据失败");
+                    },
+                    onCheck: function (row) {
+                        datas.push(row.id);
+                        let url = "http://www.haimian.com/api/Msfexport?date = " + datas
+                        $("#msfdc").attr("href", url);
+                        console.log(url)
+                    },
+                    onCheckAll: function (row) {
+                        for (var i = 0; i < row.length; i++) {
+                            datas.push(row[i].id)
+                        }
+                        let url = "http://www.haimian.com/api/Msfexport?date = " + datas
+                        $("#msfdc").attr("href", url);
+                    },
+                    onUncheck: function (row) {
+                        datas.splice($.inArray(row.id, datas), 1)
+                        console.log(datas)
+                    },
+                    onUncheckAll: function (row) {
+                        datas = []
+                    }
+                })
+                // $('#table').on("click-row.bs.table", function(a, b, c) {
+                //     console.log(b)
+                // })
+                $('.nav-pills li').click(function () {
+                    $(this).addClass('nav-active').siblings('.nav-active').removeClass('nav-active')
+                })
+                $('.main-content-top li').click(function () {
+                    $(this).addClass('main-content-active').siblings().removeClass('main-content-active')
+                })
+            }
+        }
+    })
+    $(document).on("click", ".nav-pills li", function () {
+        datas = []
+        let id = $(this).attr('data-id');
+        schoolid = id
+        aa(id)
+        let status = 0
+        let url = "http://www.haimian.com/api/Msfexportdata?schoolid = " + schoolid + "&status = " + status
+        $("#msfalldc").attr('href', url)
+        $(this).addClass('nav-active').siblings('.nav-active').removeClass('nav-active')
+        // console.log(id)
+        $.ajax({
+            url: 'http://www.haimian.com/api/getIndex',
+            dataType: 'JSON',
+            type: 'POST',
+            data: {
+                "schoolid": id
+            },
+            success: function (res) {
+                $(".main-content-top li").removeClass('main-content-active')
+                $(".hmbaoming").addClass('main-content-active')
+                let data = res.data.data
+                let $htmls = ''
+                if (data == '') {
+                    $htmls = `<div style='background:#eee;width:100%;text-align:center;line-height:50px;font-size:16px'>暂无数据</div>`
+                    $('.data_table').html($htmls)
+                } else {
+                    $('.data_table').html('<table id="table"></table>')
+                    $("#table").bootstrapTable({ // 对应table标签的id
+                        // url: "<%=request.getContextPath()%>/api/getDataList.do", // 获取表格数据的url
+                        // cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
+                        // striped: true, //表格显示条纹，默认为false
+                        pagination: true, // 在表格底部显示分页组件，默认false
+                        //search: true,
+                        //detailView: true, //父子表
+                        striped: true,
+                        pageList: [10, 20, 30], // 设置页面可以显示的数据条数
+                        pageSize: 10, // 页面数据条数
+                        //sidePagination: "client", //server
+                        // clickToSelect: true, //是否启用点击选中行
+                        pageNumber: 1, // 首页页码
+                        columns: [{
+                            checkbox: true, // 显示一个勾选框
+                            align: 'center',
+                            valign: 'middle', // 居中显示
+
+                        }, {
+                            field: 'user_number', // 返回json数据中的name
+                            title: '编号', // 表格表头显示文字
+                            align: 'center', // 左右居中
+                            valign: 'middle' // 上下居中
+                        }, {
+                            field: 'name',
+                            title: '省份',
+                            align: 'center',
+                            valign: 'middle'
+                        }, {
+                            field: 'phone',
+                            title: '联系号码',
+                            align: 'center',
+                            valign: 'middle',
+
+                        }, {
+                            field: 'statu',
+                            title: '状态',
+                            align: 'center',
+                            valign: 'middle',
+                        },
+                            {
+                                field: 'push_time',
+                                title: '推送时间',
+                                align: 'center',
+                                valign: 'middle',
+                            }, {
+                                field: 'abbreviation',
+                                title: '报名客户',
+                                align: 'center',
+                                valign: 'middle',
+                            },
+
+
+                            {
+                                title: "操作",
+                                align: 'center',
+                                valign: 'middle',
+                                width: 160, // 定义列的宽度，单位为像素px
+                                formatter: function (value, row, index) {
+                                    return +'<button class="delete  btn" id="delete">删除</button>';
+                                },
+                                events: {
+                                    'click #fenpei': function (e, value, row, index) {
+                                        console.log(index)
+                                        // layer.open({
+                                        //     type: 1,
+                                        //     skin: 'layui-layer-rim', //加上边框
+                                        //     area: ['420px', '240px'], //宽高
+                                        //     content: 'html内容'
+                                        // });
+                                    }
+                                }
+                            }
+                        ],
+                        data: data,
+                        onLoadSuccess: function () { //加载成功时执行
+                            console.info("加载成功");
+                        },
+                        onLoadError: function () { //加载失败时执行
+                            console.info("加载数据失败");
+                        },
+                        onCheck: function (row) {
+                            datas.push(row.id);
+                            let url = "http://www.haimian.com/api/Msfexport?date = " + datas
+                            $("#msfdc").attr("href", url);
+                            console.log(url)
+                        },
+                        onCheckAll: function (row) {
+                            for (var i = 0; i < row.length; i++) {
+                                datas.push(row[i].id)
+                            }
+                            let url = "http://www.haimian.com/api/Msfexport?date = " + datas
+                            $("#msfdc").attr("href", url);
+                        },
+                        onUncheck: function (row) {
+                            datas.splice($.inArray(row.id, datas), 1)
+                            console.log(datas)
+                        },
+                        onUncheckAll: function (row) {
+                            datas = []
+                        }
+                    })
+
+                    // $('#table').on("click-row.bs.table", function(a, b, c) {
+                    //     console.log(b)
+                    // })
+                    $('.nav-pills li').click(function () {
+                        $(this).addClass('nav-active').siblings('.nav-active').removeClass('nav-active')
+                    })
+                    $('.main-content-top li').click(function () {
+                        $(this).addClass('main-content-active').siblings().removeClass('main-content-active')
+                    })
+                }
+
+            }
+
+            //console.log(data)
+        })
+    })
+    $('.nav_search_huashi').on("input", function () {
+        //console.log($('.nav_search_huashi').val())
+        //let ctx = e.originalEvent.data
+        let search = $('.nav_search_huashi').val()
+        if (search != '') {
+            $(".fa-times-circle").css("display", "block")
+        } else {
+            $(".fa-times-circle").css("display", "none")
+        }
+        $.ajax({
+            url: 'http://www.haimian.com/api/getSchool',
+            dataType: 'JSON',
+            type: 'POST',
+            data: {
+                "school": search
+            },
+            success: function (res) {
+                // if (search == '') {
+                //     // console.log(res)
+                //     return false
+                // } else if (res.message == '没有此城市的学校信息' && search != '') {
+                //     alert('暂无该城市信息')
+                // } else if (res.message == "成功" && search != '') {
+                //     let id = res.data[0].id
+                let data = res.data.data
+                let $html = ''
+                $.each(data, function (index, item) {
+                    $html += `<li data-id='${item.id}'>
+                                    <a href="javascript:;">${item.abbreviation}
+                                        <span class="badge pull-right bg-default">${item.count}</span>
+                                    </a>
+                                </li>`
+                    $('.nav-stacked').html($html)
+                })
+
+                // $.ajax({
+                //     url: 'http://www.haimian.com/api/getIndex',
+                //     dataType: 'JSON',
+                //     type: 'POST',
+                //     data: {
+                //         "schoolid": id
+                //     },
+                //     success: function(res) {
+                //         let data = res.data.data
+                //         $('.data_table').html('<table id="table"></table>')
+                //         $("#table").bootstrapTable({ // 对应table标签的id
+                //             // url: "<%=request.getContextPath()%>/api/getDataList.do", // 获取表格数据的url
+                //             // cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
+                //             // striped: true, //表格显示条纹，默认为false
+                //             pagination: true, // 在表格底部显示分页组件，默认false
+                //             //search: true,
+                //             //detailView: true, //父子表
+                //             striped: true,
+                //             pageList: [10, 20, 30], // 设置页面可以显示的数据条数
+                //             pageSize: 10, // 页面数据条数
+                //             //sidePagination: "client", //server
+                //             // clickToSelect: true, //是否启用点击选中行
+                //             pageNumber: 1, // 首页页码
+                //             columns: [{
+                //                 checkbox: true, // 显示一个勾选框
+                //                 align: 'center',
+                //                 valign: 'middle', // 居中显示
+                //
+                //             }, {
+                //                 field: 'user_number', // 返回json数据中的name
+                //                 title: '编号', // 表格表头显示文字
+                //                 align: 'center', // 左右居中
+                //                 valign: 'middle' // 上下居中
+                //             }, {
+                //                 field: 'name',
+                //                 title: '省份',
+                //                 align: 'center',
+                //                 valign: 'middle'
+                //             }, {
+                //                 field: 'phone',
+                //                 title: '联系号码',
+                //                 align: 'center',
+                //                 valign: 'middle',
+                //
+                //             }, {
+                //                 field: 'statu',
+                //                 title: '状态',
+                //                 align: 'center',
+                //                 valign: 'middle',
+                //             },
+                //                 {
+                //                     field: 'push_time',
+                //                     title: '推送时间',
+                //                     align: 'center',
+                //                     valign: 'middle',
+                //                 },{
+                //                     field: 'abbreviation',
+                //                     title: '报名客户',
+                //                     align: 'center',
+                //                     valign: 'middle',
+                //                 },
+                //
+                //                 {
+                //                     title: "操作",
+                //                     align: 'center',
+                //                     valign: 'middle',
+                //                     width: 160, // 定义列的宽度，单位为像素px
+                //                     formatter: function (value, row, index) {
+                //                         return '<button class="fenpei btn btn-primary" id="fenpei">分配</button>' + '<button class="delete  btn" id="delete">删除</button>';
+                //                     },
+                //                     events: {
+                //                         'click #fenpei': function (e, value, row, index) {
+                //                             console.log(index)
+                //                             // layer.open({
+                //                             //     type: 1,
+                //                             //     skin: 'layui-layer-rim', //加上边框
+                //                             //     area: ['420px', '240px'], //宽高
+                //                             //     content: 'html内容'
+                //                             // });
+                //                         }
+                //                     }
+                //                 }
+                //             ],
+                //             data: data,
+                //             onLoadSuccess: function () { //加载成功时执行
+                //                 console.info("加载成功");
+                //             },
+                //             onLoadError: function () { //加载失败时执行
+                //                 console.info("加载数据失败");
+                //             },
+                //             onCheck: function (row) {
+                //                 console.log("您选中的行的name为" + row.name + "，您选中的行的age为" + row.age + "，您选中的行的id为" + row.id);
+                //             }
+                //         })
+
+                // $('#table').on("click-row.bs.table", function(a, b, c) {
+                //     console.log(b)
+                // })
+                $('.nav-pills li').click(function () {
+                    $(this).addClass('nav-active').siblings('.nav-active').removeClass('nav-active')
+                })
+                $('.main-content-top li').click(function () {
+                    $(this).addClass('main-content-active').siblings().removeClass('main-content-active')
+                })
+            }
+
+        })
+    })
+</script>
+</body>
+
+</html>

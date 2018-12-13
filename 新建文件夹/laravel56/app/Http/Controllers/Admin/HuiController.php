@@ -30,7 +30,8 @@ class HuiController extends Controller
             }else{
                 $where = "  SELECT b.`name` city,b.id ,COUNT(a.name) count  FROM (SELECT * FROM applies a WHERE a.status = 5) a 
                         RIGHT JOIN school_categories b ON a.province = b.id WHERE  b.`name` LIKE '".$city."%' and b.category_type = 0 GROUP BY b.`name` ,b.id";
-                $data = $categoryModel->getSearch($where);
+                $datas = $categoryModel->getSearch($where);
+                $data['data'] = $datas;
                 return $this->JsonReturnTrue($data);
             }
         }catch (\Exception $e){

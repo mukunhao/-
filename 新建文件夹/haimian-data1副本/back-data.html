@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Flat, Clean, Responsive, admin template built with bootstrap 3">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
-    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta http-equiv="Access-Control-Allow-Origin" content="*"/>
     <title>Cameo | Responsive Admin Dashboard</title>
 
     <script type="text/javascript">
@@ -76,50 +76,14 @@ Cameo<b>ADMIN</b>
                                             <img src="img/face4.jpg" class="avatar avatar-sm img-circle" alt="">
                                         </span>
                                     <div class="m-body show pd-t-xs">
-                                        <a href="baoming.html">
+                                        <a href="baoming.html" class="news">
                                             <span class="newStudentBm"></span>
-                                            <span>赶快去查看吧</span>
                                             <small class="newStudentSmall"></small>
                                         </a>
                                     </div>
                                 </a>
                             </li>
-                            <!--<li class="list-group-item">-->
-                                <!--<a href="javascript:;">-->
-                                        <!--<span class="pull-left mg-t-xs mg-r-md">-->
-                                            <!--<span class="fa-stack fa-lg">-->
-                                                <!--<i class="fa fa-circle fa-stack-2x text-warning"></i>-->
-                                                <!--<i class="fa fa-download fa-stack-1x fa-inverse"></i>-->
-                                            <!--</span>-->
-                                        <!--</span>-->
-                                    <!--<div class="m-body show pd-t-xs">-->
-                                        <!--<span>下载大小145MB.</span>-->
-                                        <!--<div class="progress progress-xs mg-t-xs mg-b-xs">-->
-                                            <!--<div class="progress-bar progress-bar-primary" role="progressbar"-->
-                                                 <!--aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"-->
-                                                 <!--style="width: 40%">-->
-                                            <!--</div>-->
-                                        <!--</div>-->
-                                        <!--<small>发布于23分钟前</small>-->
-                                    <!--</div>-->
-                                <!--</a>-->
-                            <!--</li>-->
-                            <!--<li class="list-group-item">-->
-                                <!--<a href="javascript:;">-->
-                                        <!--<span class="pull-left mg-t-xs mg-r-md">-->
-                                            <!--<img src="img/face3.jpg" class="avatar avatar-sm img-circle" alt="">-->
-                                        <!--</span>-->
-                                    <!--<div class="m-body show pd-t-xs">-->
-                                        <!--<span>应用</span>-->
-                                        <!--<span>我的工作去区控件在哪</span>-->
-                                        <!--<small>5天前</small>-->
-                                    <!--</div>-->
-                                <!--</a>-->
-                            <!--</li>-->
                         </ul>
-                        <!--<div class="panel-footer no-border">-->
-                            <!--<a href="javascript:;">查看所有更新</a>-->
-                        <!--</div>-->
                     </div>
                 </div>
             </li>
@@ -221,6 +185,7 @@ Cameo<b>ADMIN</b>
                 <nav role="navigation">
                     <div class="no-padding">
                         <input type="text" placeholder="搜索地区" class="nav_search_huashi">
+                        <li class="fa fa-times-circle "></li>
                         <!-- <div class="nav_all_data">全部<span class="badge pull-right bg-danger">896</span></div> -->
                         <ul class="nav nav-pills nav-stacked">
                         </ul>
@@ -231,7 +196,7 @@ Cameo<b>ADMIN</b>
         <section class="main-content">
             <ul class="main-content-top main-content-all">
                 <li class="main-content-active"><a href="javascript:;">回收数据
-</a></li>
+                </a></li>
 
             </ul>
             <ul class="main-content-all main-content-center">
@@ -267,6 +232,39 @@ Cameo<b>ADMIN</b>
 <script type="text/javascript">
     let city = '';
     var datas = [];
+    $(".fa-times-circle").click(function () {
+        $(".nav_search_huashi").val('')
+        $(".fa-times-circle").css("display", "none")
+        circle()
+    })
+
+    function circle() {
+        $.ajax({
+            url: 'http://www.haimian.com/api/getcity',
+            dataType: 'JSON',
+            type: 'POST',
+            data: {
+                "city": city
+            },
+            success: function (res) {
+                let data = res.data.data;
+                let $html = `<li class="nav-active" data-id=''>
+                                    <a href="javascript:;">全部
+                                                <span class="badge pull-right bg-danger">${res.data.nums}</span>
+                                            </a>
+                                </li>`;
+                $.each(data, function (index, item) {
+                    $html += `<li data-id='${item.id}'>
+                                    <a href="javascript:;">${item.city}
+                                        <span class="badge pull-right bg-default">${item.count}</span>
+                                    </a>
+                                </li>`
+                    $('.nav-stacked').html($html)
+                })
+            }
+        })
+    }
+
     $.ajax({
         url: 'http://www.haimian.com/api/getcity',
         dataType: 'JSON',
@@ -274,14 +272,14 @@ Cameo<b>ADMIN</b>
         data: {
             "city": city
         },
-        success: function(res) {
+        success: function (res) {
             let data = res.data.data;
             let $html = `<li class="nav-active" data-id=''>
                                     <a href="javascript:;">全部
                                                 <span class="badge pull-right bg-danger">${res.data.nums}</span>
                                             </a>
                                 </li>`;
-            $.each(data, function(index, item) {
+            $.each(data, function (index, item) {
                 $html += `<li data-id='${item.id}'>
                                     <a href="javascript:;">${item.city}
                                         <span class="badge pull-right bg-default">${item.count}</span>
@@ -373,20 +371,20 @@ Cameo<b>ADMIN</b>
                 onCheck: function (row) {
                     datas.push(row.id);
                     let url = "http://www.haimian.com/api/export?date = " + datas
-                    $("#pldc").attr("href",url);
+                    $("#pldc").attr("href", url);
                 },
                 onCheckAll: function (row) {
-                    for (var i=0;i<row.length;i++){
+                    for (var i = 0; i < row.length; i++) {
                         datas.push(row[i].id)
                     }
                     let url = "http://www.haimian.com/api/export?date = " + datas
-                    $("#pldc").attr("href",url);
+                    $("#pldc").attr("href", url);
                 },
                 onUncheck: function (row) {
-                    datas.splice($.inArray(row.id,datas),1)
+                    datas.splice($.inArray(row.id, datas), 1)
                     console.log(datas)
                 },
-                onUncheckAll:function (row) {
+                onUncheckAll: function (row) {
                     datas = []
                 }
             })
@@ -402,18 +400,31 @@ Cameo<b>ADMIN</b>
         }
     })
 
+    var storage = window.localStorage;
+    $(".news").click(function () {
+        storage.time = (new Date()).getTime();
+        console.log(storage["time"])
+        $("#newStudent").html('')
+        $(".news").hide()
+    })
     $.ajax({
         url: 'http://www.haimian.com/api/getStudentNo',
         dataType: 'JSON',
         type: 'get',
-        success:function (res) {
-            if (res.data[0].count != 0){
-                $(".newStudentBm").html("你有"+res.data[0].count + "个新的报名数据")
-                $(".newStudentSmall").html(res.data.date)
-                $("#newStudent").html(1)
+        success: function (res) {
+            console.log(storage["time"])
+            if (res.data.time > storage["time"]) {
+                if (res.data.count[0].count != 0) {
+                    $(".newStudentBm").html("你有" + res.data.count[0].count + "个新的报名数据 赶快去查看吧")
+                    $(".newStudentSmall").html(res.data.date[0].created_at)
+                    $("#newStudent").html(1)
+                }
+            } else {
+                $(".newStudentBm").html("暂无新报名数据")
             }
         }
     })
+
     // $(".pldc").click(function () {
     //
     //     $.ajax({
@@ -429,10 +440,10 @@ Cameo<b>ADMIN</b>
     //     })
     //
     // })
-    $(document).on("click", ".nav-pills li", function() {
+    $(document).on("click", ".nav-pills li", function () {
         let id = $(this).attr('data-id');
         let urls = "http://www.haimian.com/api/exportData?cityid = " + id
-        $("#qbdc").attr("href",urls);
+        $("#qbdc").attr("href", urls);
         $(this).addClass('nav-active').siblings('.nav-active').removeClass('nav-active')
         // console.log(id)
         $.ajax({
@@ -442,7 +453,7 @@ Cameo<b>ADMIN</b>
             data: {
                 "cityid": id
             },
-            success: function(res) {
+            success: function (res) {
                 let data = res.data
                 let $htmls = ''
                 if (data == '') {
@@ -450,7 +461,7 @@ Cameo<b>ADMIN</b>
                     $('.data_table').html($htmls)
                 } else {
                     $('.data_table').html('<table id="table"></table>')
-                  $("#table").bootstrapTable({ // 对应table标签的id
+                    $("#table").bootstrapTable({ // 对应table标签的id
                         // url: "<%=request.getContextPath()%>/api/getDataList.do", // 获取表格数据的url
                         // cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
                         // striped: true, //表格显示条纹，默认为false
@@ -522,26 +533,26 @@ Cameo<b>ADMIN</b>
                         onCheck: function (row) {
                             datas.push(row.id);
                             let url = "http://www.haimian.com/api/export?date = " + datas
-                            $("#pldc").attr("href",url);
+                            $("#pldc").attr("href", url);
                             console.log(url)
                         },
-                      onCheckAll: function (row) {
-                          for (var i=0;i<row.length;i++){
-                              datas.push(row[i].id)
-                          }
+                        onCheckAll: function (row) {
+                            for (var i = 0; i < row.length; i++) {
+                                datas.push(row[i].id)
+                            }
 
-                          console.log(datas)
-                          let url = "http://www.haimian.com/api/export?date = " + datas
-                          $("#pldc").attr("href",url);
-                          console.log(url)
-                      },
-                      onUncheck: function (row) {
-                          datas.splice($.inArray(row.id,datas),1)
-                          console.log(datas)
-                      },
-                      onUncheckAll:function (row) {
-                          datas = []
-                      }
+                            console.log(datas)
+                            let url = "http://www.haimian.com/api/export?date = " + datas
+                            $("#pldc").attr("href", url);
+                            console.log(url)
+                        },
+                        onUncheck: function (row) {
+                            datas.splice($.inArray(row.id, datas), 1)
+                            console.log(datas)
+                        },
+                        onUncheckAll: function (row) {
+                            datas = []
+                        }
                     })
 
                     // $('#table').on("click-row.bs.table", function(a, b, c) {
@@ -560,10 +571,15 @@ Cameo<b>ADMIN</b>
             //console.log(data)
         })
     })
-    $('.nav_search_huashi').on("change", function() {
+    $('.nav_search_huashi').on("input", function () {
         //console.log($('.nav_search_huashi').val())
         //let ctx = e.originalEvent.data
         let search = $('.nav_search_huashi').val()
+        if (search != '') {
+            $(".fa-times-circle").css("display", "block")
+        } else {
+            $(".fa-times-circle").css("display", "none")
+        }
         $.ajax({
             url: 'http://www.haimian.com/api/getcity',
             dataType: 'JSON',
@@ -571,130 +587,125 @@ Cameo<b>ADMIN</b>
             data: {
                 "city": search
             },
-            success: function(res) {
-                if (search == '') {
-                    // console.log(res)
-                    return false
-                } else if (res.message == '没有此城市的学校信息' && search != '') {
-                    alert('暂无该城市信息')
-                } else if (res.message == "成功" && search != '') {
-                    let $html = ''
-                    let id = res.data[0].id
-                    let data = res.data;
-                    // let $html = `<li class="nav-active" data-id=''>
-                    //                 <a href="javascript:;">全部
-                    //                             <span class="badge pull-right bg-danger">${res.data.nums}</span>
-                    //                         </a>
-                    //             </li>`;
-                    $.each(data, function(index, item) {
-                        $html = `<li data-id='${item.id}'>
+            success: function (res) {
+                // if (res.message == '没有此城市的学校信息' && search != '') {
+                //     alert('暂无该城市信息')
+                // } else if (res.message == "成功" && search != '') {
+                let $html = ''
+                // let id = res.data.data[0].id
+                let data = res.data.data;
+                // let $html = `<li class="nav-active" data-id=''>
+                //                 <a href="javascript:;">全部
+                //                             <span class="badge pull-right bg-danger">${res.data.nums}</span>
+                //                         </a>
+                //             </li>`;
+                $.each(data, function (index, item) {
+                    $html += `<li data-id='${item.id}'>
                                     <a href="javascript:;">${item.city}
                                         <span class="badge pull-right bg-default">${item.count}</span>
                                     </a>
                                 </li>`
-                        $('.nav-stacked').html($html)
-                    })
-}
-                    // $.ajax({
-                    //     url: 'http://www.haimian.com/api/getstudent',
-                    //     dataType: 'JSON',
-                    //     type: 'POST',
-                    //     data: {
-                    //         "cityid": id
-                    //     },
-                    //     success: function(res) {
-                    //         let data = res.data
-                    //         $('.data_table').html('<table id="table"></table>')
-                    //         $("#table").bootstrapTable({ // 对应table标签的id
-                    //             // url: "<%=request.getContextPath()%>/api/getDataList.do", // 获取表格数据的url
-                    //             // cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
-                    //             // striped: true, //表格显示条纹，默认为false
-                    //             pagination: true, // 在表格底部显示分页组件，默认false
-                    //             //search: true,
-                    //             //detailView: true, //父子表
-                    //             striped: true,
-                    //             pageList: [10, 20, 30], // 设置页面可以显示的数据条数
-                    //             pageSize: 10, // 页面数据条数
-                    //             //sidePagination: "client", //server
-                    //             // clickToSelect: true, //是否启用点击选中行
-                    //             pageNumber: 1, // 首页页码
-                    //             columns: [{
-                    //                 checkbox: true, // 显示一个勾选框
-                    //                 align: 'center',
-                    //                 valign: 'middle', // 居中显示
-                    //
-                    //             }, {
-                    //                 field: 'user_number', // 返回json数据中的name
-                    //                 title: '编号', // 表格表头显示文字
-                    //                 align: 'center', // 左右居中
-                    //                 valign: 'middle' // 上下居中
-                    //             }, {
-                    //                 field: 'name',
-                    //                 title: '省份',
-                    //                 align: 'center',
-                    //                 valign: 'middle'
-                    //             }, {
-                    //                 field: 'phone',
-                    //                 title: '联系号码',
-                    //                 align: 'center',
-                    //                 valign: 'middle',
-                    //
-                    //             }, {
-                    //                 field: 'updated_at',
-                    //                 title: '回收时间',
-                    //                 align: 'center',
-                    //                 valign: 'middle',
-                    //             },
-                    //
-                    //                 {
-                    //                     title: "操作",
-                    //                     align: 'center',
-                    //                     valign: 'middle',
-                    //                     width: 160, // 定义列的宽度，单位为像素px
-                    //                     formatter: function (value, row, index) {
-                    //                         return '<button class="fenpei btn btn-primary" id="fenpei">分配</button>' + '<button class="delete  btn" id="delete">删除</button>';
-                    //                     },
-                    //                     events: {
-                    //                         'click #fenpei': function (e, value, row, index) {
-                    //                             console.log(index)
-                    //                             // layer.open({
-                    //                             //     type: 1,
-                    //                             //     skin: 'layui-layer-rim', //加上边框
-                    //                             //     area: ['420px', '240px'], //宽高
-                    //                             //     content: 'html内容'
-                    //                             // });
-                    //                         }
-                    //                     }
-                    //                 }
-                    //             ],
-                    //             data: data,
-                    //             onLoadSuccess: function () { //加载成功时执行
-                    //                 console.info("加载成功");
-                    //             },
-                    //             onLoadError: function () { //加载失败时执行
-                    //                 console.info("加载数据失败");
-                    //             },
-                    //             onCheck: function (row) {
-                    //                 console.log("您选中的行的name为" + row.name + "，您选中的行的age为" + row.age + "，您选中的行的id为" + row.id);
-                    //             }
-                    //         })
+                    $('.nav-stacked').html($html)
+                })
+// }
+                // $.ajax({
+                //     url: 'http://www.haimian.com/api/getstudent',
+                //     dataType: 'JSON',
+                //     type: 'POST',
+                //     data: {
+                //         "cityid": id
+                //     },
+                //     success: function(res) {
+                //         let data = res.data
+                //         $('.data_table').html('<table id="table"></table>')
+                //         $("#table").bootstrapTable({ // 对应table标签的id
+                //             // url: "<%=request.getContextPath()%>/api/getDataList.do", // 获取表格数据的url
+                //             // cache: false, // 设置为 false 禁用 AJAX 数据缓存， 默认为true
+                //             // striped: true, //表格显示条纹，默认为false
+                //             pagination: true, // 在表格底部显示分页组件，默认false
+                //             //search: true,
+                //             //detailView: true, //父子表
+                //             striped: true,
+                //             pageList: [10, 20, 30], // 设置页面可以显示的数据条数
+                //             pageSize: 10, // 页面数据条数
+                //             //sidePagination: "client", //server
+                //             // clickToSelect: true, //是否启用点击选中行
+                //             pageNumber: 1, // 首页页码
+                //             columns: [{
+                //                 checkbox: true, // 显示一个勾选框
+                //                 align: 'center',
+                //                 valign: 'middle', // 居中显示
+                //
+                //             }, {
+                //                 field: 'user_number', // 返回json数据中的name
+                //                 title: '编号', // 表格表头显示文字
+                //                 align: 'center', // 左右居中
+                //                 valign: 'middle' // 上下居中
+                //             }, {
+                //                 field: 'name',
+                //                 title: '省份',
+                //                 align: 'center',
+                //                 valign: 'middle'
+                //             }, {
+                //                 field: 'phone',
+                //                 title: '联系号码',
+                //                 align: 'center',
+                //                 valign: 'middle',
+                //
+                //             }, {
+                //                 field: 'updated_at',
+                //                 title: '回收时间',
+                //                 align: 'center',
+                //                 valign: 'middle',
+                //             },
+                //
+                //                 {
+                //                     title: "操作",
+                //                     align: 'center',
+                //                     valign: 'middle',
+                //                     width: 160, // 定义列的宽度，单位为像素px
+                //                     formatter: function (value, row, index) {
+                //                         return '<button class="fenpei btn btn-primary" id="fenpei">分配</button>' + '<button class="delete  btn" id="delete">删除</button>';
+                //                     },
+                //                     events: {
+                //                         'click #fenpei': function (e, value, row, index) {
+                //                             console.log(index)
+                //                             // layer.open({
+                //                             //     type: 1,
+                //                             //     skin: 'layui-layer-rim', //加上边框
+                //                             //     area: ['420px', '240px'], //宽高
+                //                             //     content: 'html内容'
+                //                             // });
+                //                         }
+                //                     }
+                //                 }
+                //             ],
+                //             data: data,
+                //             onLoadSuccess: function () { //加载成功时执行
+                //                 console.info("加载成功");
+                //             },
+                //             onLoadError: function () { //加载失败时执行
+                //                 console.info("加载数据失败");
+                //             },
+                //             onCheck: function (row) {
+                //                 console.log("您选中的行的name为" + row.name + "，您选中的行的age为" + row.age + "，您选中的行的id为" + row.id);
+                //             }
+                //         })
 
-                            // $('#table').on("click-row.bs.table", function(a, b, c) {
-                            //     console.log(b)
-                            // })
-                            $('.nav-pills li').click(function () {
-                                $(this).addClass('nav-active').siblings('.nav-active').removeClass('nav-active')
-                            })
-                            $('.main-content-top li').click(function () {
-                                $(this).addClass('main-content-active').siblings().removeClass('main-content-active')
-                            })
+                // $('#table').on("click-row.bs.table", function(a, b, c) {
+                //     console.log(b)
+                // })
+                $('.nav-pills li').click(function () {
+                    $(this).addClass('nav-active').siblings('.nav-active').removeClass('nav-active')
+                })
+                $('.main-content-top li').click(function () {
+                    $(this).addClass('main-content-active').siblings().removeClass('main-content-active')
+                })
 
-                        }
-                    })
-
+            }
         })
 
-
+    })
 
 
 </script>

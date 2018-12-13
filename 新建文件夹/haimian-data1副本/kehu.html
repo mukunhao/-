@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="description" content="Flat, Clean, Responsive, admin template built with bootstrap 3">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+
+    <title>推送</title>
+
+    <script type="text/javascript">
+    </script>
+    <link rel="stylesheet" href="vendor/offline/theme.css">
+    <link rel="stylesheet" href="vendor/pace/theme.css">
+    <link rel="stylesheet" href="vendor/toastr/toastr.css">
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link href="css/bootstrap-table.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/panel.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/skins/palette.1.css" id="skin">
+    <link rel="stylesheet" href="css/fonts/style.1.css" id="font">
+    <link rel="stylesheet" href="css/main.css">
+
+
+    <script src="vendor/modernizr.js"></script>
+    <script type="text/javascript">
+    </script>
+</head>
+
+<body>
+
+<div class="app" data-sidebar="locked">
+
+    <header class="header header-fixed navbar box-shadow">
+        <!-- <div class="brand">
+            <a href="javascript:;" class="fa fa-bars off-left visible-xs" data-toggle="off-canvas" data-move="ltr"></a>
+            <a href="javascript:;" class="fa fa-align-right off-right visible-xs" data-toggle="off-canvas" data-move="rtl"></a>
+            <a href="index.html" class="navbar-brand">
+                <i class="fa fa-stop mg-r-sm"></i>
+                <span class="heading-font">
+Cameo<b>ADMIN</b>
+</span>
+            </a>
+        </div> -->
+        <div class="brands">
+            海绵大数据系统
+        </div>
+
+        <ul class="nav navbar-nav navbar-right hidden-xs">
+
+            <!-- 消息 -->
+            <li class="notifications dropdown hidden-xs">
+                <a href="javascript:;" data-toggle="dropdown">
+                    <i class="fa fa-bell"></i>
+                    <div class="badge badge-top bg-danger animated flash" id="newStudent"></div>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right animated slideInRight">
+                    <div class="panel bg-white no-border no-margin">
+                        <div class="panel-heading no-radius">
+                            <small>
+                                <b>更新</b>
+                            </small>
+                            <small class="pull-right">
+                                <a href="javascript:;" class="mg-r-xs">标记已读</a>&#8226;
+                                <a href="javascript:;" class="fa fa-cog mg-l-xs"></a>
+                            </small>
+                        </div>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <a href="javascript:;">
+                                        <span class="pull-left mg-t-xs mg-r-md">
+                                            <img src="img/face4.jpg" class="avatar avatar-sm img-circle" alt="">
+                                        </span>
+                                    <div class="m-body show pd-t-xs">
+                                        <a href="baoming.html" class="news">
+                                            <span class="newStudentBm"></span>
+                                            <small class="newStudentSmall"></small>
+                                        </a>
+                                    </div>
+                                </a>
+                            </li>
+                            <!--<li class="list-group-item">-->
+                            <!--<a href="javascript:;">-->
+                            <!--<span class="pull-left mg-t-xs mg-r-md">-->
+                            <!--<span class="fa-stack fa-lg">-->
+                            <!--<i class="fa fa-circle fa-stack-2x text-warning"></i>-->
+                            <!--<i class="fa fa-download fa-stack-1x fa-inverse"></i>-->
+                            <!--</span>-->
+                            <!--</span>-->
+                            <!--<div class="m-body show pd-t-xs">-->
+                            <!--<span>下载大小145MB.</span>-->
+                            <!--<div class="progress progress-xs mg-t-xs mg-b-xs">-->
+                            <!--<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <!--<small>发布于23分钟前</small>-->
+                            <!--</div>-->
+                            <!--</a>-->
+                            <!--</li>-->
+                            <!--<li class="list-group-item">-->
+                            <!--<a href="javascript:;">-->
+                            <!--<span class="pull-left mg-t-xs mg-r-md">-->
+                            <!--<img src="img/face3.jpg" class="avatar avatar-sm img-circle" alt="">-->
+                            <!--</span>-->
+                            <!--<div class="m-body show pd-t-xs">-->
+                            <!--<span>应用</span>-->
+                            <!--<span>我的工作去区控件在哪</span>-->
+                            <!--<small>5天前</small>-->
+                            <!--</div>-->
+                            <!--</a>-->
+                            <!--</li>-->
+                        </ul>
+                        <!--<div class="panel-footer no-border">-->
+                        <!--<a href="javascript:;">查看所有更新</a>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </li>
+
+            <!-- 用户 -->
+            <li class="quickmenu">
+                <a href="javascript:;" data-toggle="dropdown">
+                        <span class="avatar pull-left img-circle" style="display:block;width: 50px;line-height: 30px;
+                        ">管理员</span>
+                    <i class="caret mg-l-xs hidden-xs no-margin"></i>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right mg-r-xs">
+                    <li>
+                        <a href="javascript:;">
+                            <div class="pd-t-sm">
+                                gerald@morris.com
+                                <br>
+                                <small class="text-muted">4.2 MB of 51.25 GB used</small>
+                            </div>
+                            <div class="progress progress-xs no-radius no-margin mg-b-sm">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                                     aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="###">设置</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">更新</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">消息通知
+                            <div class="badge bg-danger pull-right">3</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">帮助 ?</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li>
+                        <a href="signin.html">退出登录</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+
+    <section class="layout">
+
+        <aside class="sidebar canvas-left" style="background:#000">
+
+            <nav class="main-navigation">
+                <ul>
+                    <li class="active">
+                        <a onclick="window.location = './kehu.html'" data-toggle="dropdown">
+                            <!-- <i class="fa fa-coffee"></i> -->
+                            <span>推送数据</span>
+                        </a>
+                    </li>
+                    <li class="dropdown show-on-hover">
+                        <a onclick="window.location = './back-data.html'" href="###" data-toggle="dropdown">
+                            <!-- <i class="fa fa-ellipsis-h"></i> -->
+                            <span>回收数据</span>
+                        </a>
+
+                    </li>
+                    <li class="dropdown show-on-hover">
+                        <a onclick="window.location = './mail.html'" href="###" data-toggle="dropdown">
+                            <!-- <i class="fa fa-tasks"></i> -->
+                            <span>海绵数据</span>
+                        </a>
+
+                    </li>
+                    <li>
+                        <a onclick="window.location = './baoming.html'" href="###" data-toggle="dropdown">
+                            <!-- <div class="badge bg-none pull-right">8</div> -->
+                            <!-- <i class="fa fa-envelope"></i> -->
+                            <span>美术饭报名</span>
+                        </a>
+                    </li>
+                    <li class="dropdown show-on-hover">
+                        <a href="javascript:;" data-toggle="dropdown">
+                            <!-- <i class="fa fa-file"></i> -->
+                            <span>统计报告</span>
+                        </a>
+
+                </ul>
+            </nav>
+
+
+        </aside>
+
+
+        <aside class="sidebar-250 canvas-right bg-white bd-t">
+
+            <div class="content-wrap no-padding">
+                <nav role="navigation">
+                    <div class="no-padding">
+                        <input type="text" placeholder="搜索地区" class="nav_search_huashi">
+                        <li class="fa fa-times-circle "></li>
+                        <ul class="nav nav-pills nav-stacked">
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </aside>
+        <section class="main-content">
+            <ul class="main-content-top  main-content-tab">
+                <li><a href="javascript:;">所有客户</a></li>
+                <li>
+                    <i class="iconfont icon-icon_category main-content-click actives"></i>
+                    <i class="iconfont icon-icon-test main-content-click"></i>
+
+                </li>
+            </ul>
+            <div class="main-content-content-box">
+
+
+        </section>
+
+
+    </section>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="myModalLabel">导入数量</h4>
+            </div>
+            <div class="modal-body">
+                <div class="form-group planpush">
+                    <label style="margin-top: 20px">预计推送数量</label>
+                    <input type="text" class="form-control" id="plancount" placeholder="请输入数字" schoolid=""
+                           style="width: 60%;padding:10px 15px;height: 60px;border: 1px solid #5AC0D1">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary update">确定</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<script src="vendor/jquery-1.11.1.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="vendor/jquery.easing.min.js"></script>
+<script src="vendor/jquery.placeholder.js"></script>
+<script src="vendor/fastclick.js"></script>
+<!-- <script src="js/layer.js"></script> -->
+
+<script src="vendor/offline/offline.min.js"></script>
+<script src="vendor/pace/pace.min.js"></script>
+<script src="js/bootstrap-table.js"></script>
+<script src="js/bootstrap-table-zh-CN.js"></script>
+<script src="js/bootstrap-paginator.js"></script>
+<script src="js/off-canvas.js"></script>
+<script src="js/main.js"></script>
+<script src="vendor/toastr/toastr.js"></script>
+<script src="js/panel.js"></script>
+<script src="js/ajax.js"></script>
+<script type="text/javascript">
+</script>
+<script type="text/javascript">
+    $('.main-content-click').click(function () {
+        $(this).addClass('actives').siblings('i').removeClass('actives')
+    })
+
+
+    //居中
+    $('#myModal').on('show.bs.modal', function (e) {
+        // 关键代码，如没将modal设置为 block，则$modala_dialog.height() 为零
+        $(this).css('display', 'block');
+        var modalHeight = $(window).height() / 2 - $('#myModal .modal-dialog').height() / 2;
+        $(this).find('.modal-dialog').css({
+            'margin-top': modalHeight
+        });
+    });
+
+    $('.main-content-content').each(function (index) {
+        $(this).attr({
+            "data-index": index
+        })
+    })
+    $('.tuisong-sezhi').click(function () {
+        let index = $(this).parents('.main-content-content').attr("data-index");
+        $('.modal-body').html(index)
+    })
+</script>
+</body>
+
+</html>

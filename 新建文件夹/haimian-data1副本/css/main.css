@@ -5505,8 +5505,21 @@ canvas {
 
 .no-padding {
     padding: 0!important;
-    background-color: #eee
+    background-color: #eee;
+    position: relative;
+    height: 100%;
 }
+.fa-times-circle{
+    position: absolute;
+    right: 30px;
+    top: 37px;
+    font-size: 20px;
+    opacity: 0.5;
+    display: none;
+}
+/*#toast-container div {*/
+    /*background-color: #468847*/
+/*}*/
 
 .no-pd-l {
     padding-left: 0;

@@ -14,7 +14,7 @@ class MsfIndexController extends Controller
     public function getStudentNo(){
         $appModel = new \App\Models\Applies();
         $re = $appModel->getStudentN();
-        $re['date'] = date("Y-m-d");
+        $re['time'] = strtotime($re['date'][0]->created_at);
         return $this->JsonReturnTrue($re);
     }
     //获取客户信息
@@ -40,7 +40,8 @@ class MsfIndexController extends Controller
                 $where = "SELECT c.id,c.abbreviation,COUNT(d.abbreviation) count FROM train_schools c LEFT JOIN (
                               SELECT b.train_school_id train_school_id,a.abbreviation FROM train_schools a LEFT JOIN applies  b on
                               a.id = b.train_school_id WHERE b.source = 1) d ON c.id = d.train_school_id where  c.abbreviation LIKE '" . $school . "%' GROUP BY c.abbreviation,c.id ORDER BY COUNT(d.abbreviation) DESC";
-                $data = $schoolModel->getSearch($where);
+                $datas = $schoolModel->getSearch($where);
+                $data['data'] = $datas;
                 return $this->JsonReturnTrue($data);
             }
         } catch (\Exception $e) {

@@ -32,7 +32,8 @@ class HaimianTsController extends Controller
                 $where = "SELECT c.id,c.abbreviation,COUNT(d.abbreviation) count ,c.school_area_id school_area_id FROM train_schools c LEFT JOIN (
                               SELECT b.train_school_id train_school_id,a.abbreviation FROM train_schools a LEFT JOIN applies  b on
                               a.id = b.train_school_id WHERE b.source = 2) d ON c.id = d.train_school_id where  c.abbreviation LIKE '%" . $school . "%' GROUP BY c.abbreviation,c.id ORDER BY COUNT(d.abbreviation) DESC";
-                $data = $schoolModel->getSearch($where);
+                $datas = $schoolModel->getSearch($where);
+                $data['data'] = $datas;
                 return $this->JsonReturnTrue($data);
             }
         } catch (\Exception $e) {
@@ -222,7 +223,6 @@ class HaimianTsController extends Controller
             $input = Request::all();
             $studentid = $input['studentid_'];
             $schoolid = $input['schoolid'];
-
             if ($schoolid == 0) {
                 throw new \Exception('请选择画室', 211);
             }
@@ -232,6 +232,16 @@ class HaimianTsController extends Controller
         } catch (\Exception $e) {
             return $this->JsonReturnFalse($e->getCode(), $e->getMessage());
         }
-
+    }
+    public function HmDelete(){
+        try{
+            $input = Request::all();
+            $studentid = $input['studentid_'];
+            $appliesModel = new \App\Models\Applies();
+            $re = $appliesModel->Hmdel($studentid);
+            return $this->JsonReturnTrue($re);
+        }catch (\Exception $e){
+            return $this->JsonReturnFalse($e->getCode(),$e->getMessage());
+        }
     }
 }

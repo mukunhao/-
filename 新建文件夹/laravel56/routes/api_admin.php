@@ -65,4 +65,7 @@ Route::POST('/upload/{cityid}/{schoolid}','Admin\TsController@upload');
 Route::POST('/updateplan','Admin\TsController@updatePlanCount');
 //获取报名学生
 Route::get('/getStudentNo','Admin\MsfIndexController@getStudentNo');
+//删除
+Route::post('/HmDelete','Admin\HaimianTsController@HmDelete');
+
 

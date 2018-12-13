@@ -16,7 +16,7 @@ class School extends Model
     }
     //每次导入数据记录总数
     public function countData($where){
-        return DB::connection('mysql_center')->select($where);
+        return DB::connection('mysql_center')->update($where);
     }
     public function updatecount($where){
         return DB::connection('mysql_center')->update($where);
