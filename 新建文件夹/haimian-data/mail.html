@@ -229,6 +229,7 @@ Cameo<b>ADMIN</b>
             </div>
         </aside>
         <section class="main-content">
+            <span class="school_unique"><h3></h3></span>
             <ul class="main-content-top main-content-all ">
                 <li class="main-content-active hmpush"><a href="javascript:;" id="push">已推送<span
                         class="badge pull-right  bg-danger haimianpush"></span></a></li>
@@ -1003,7 +1004,7 @@ Cameo<b>ADMIN</b>
                 if (res.code != 200) {
                     setTimeout(function () {
                         toastr.options.closeButton = true;
-                        toastr.error('删除失败',res.message);
+                        toastr.error('删除失败', res.message);
                     }, 500);
                 } else {
                     setTimeout(function () {
@@ -1067,6 +1068,7 @@ Cameo<b>ADMIN</b>
         })
     })
     $(document).on("click", ".nav-pills li", function () {
+        let html = $(this).html()
         datas = []
         let id = $(this).attr('data-id');
         cityid = $(this).attr('city-id');
@@ -1084,9 +1086,9 @@ Cameo<b>ADMIN</b>
                 "schoolid": id
             },
             success: function (res) {
+                $(".school_unique h3").html(html)
                 $(".main-content-top li").removeClass('main-content-active')
-
-                    $(".hmpush").addClass('main-content-active');
+                $(".hmpush").addClass('main-content-active');
 
                 let data = res.data.data
                 let $htmls = ''

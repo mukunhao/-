@@ -5509,6 +5509,10 @@ canvas {
     position: relative;
     height: 100%;
 }
+.school_unique{
+margin-left: 40px;
+    margin-top: 15px;
+}
 .fa-times-circle{
     position: absolute;
     right: 30px;

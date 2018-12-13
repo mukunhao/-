@@ -195,6 +195,7 @@ Cameo<b>ADMIN</b>
             </div>
         </aside>
         <section class="main-content">
+            <span class="school_unique"><h3></h3></span>
             <ul class="main-content-top main-content-all">
                 <li class="main-content-active hmbaoming"><a href="javascript:;" id="baoming">报名<span
                         class="badge pull-right  bg-danger baoming"></span></a></li>
@@ -343,7 +344,7 @@ Cameo<b>ADMIN</b>
                                 </li>`;
             $.each(data, function (index, item) {
                 $html += `<li data-id='${item.id}'>
-                                    <a href="javascript:;">${item.abbreviation}
+                                    <a href="javascript:;" class="school_huashi">${item.abbreviation}
                                         <span class="badge pull-right bg-default">${item.count}</span>
                                     </a>
                                 </li>`
@@ -835,6 +836,7 @@ Cameo<b>ADMIN</b>
         }
     })
     $(document).on("click", ".nav-pills li", function () {
+        let html = $(this).html()
         datas = []
         let id = $(this).attr('data-id');
         schoolid = id
@@ -852,6 +854,8 @@ Cameo<b>ADMIN</b>
                 "schoolid": id
             },
             success: function (res) {
+
+                $(".school_unique h3").html(html)
                 $(".main-content-top li").removeClass('main-content-active')
                 $(".hmbaoming").addClass('main-content-active')
                 let data = res.data.data
